@@ -43,6 +43,7 @@
             source .venv/bin/activate
 
             pip install polars pyarrow duckdb --quiet
+            pip install -e . --quiet
 
             echo "Python ${pkgs.python311.version} ready"
           '';
