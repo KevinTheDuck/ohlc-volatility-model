@@ -21,6 +21,7 @@
           numpy
           matplotlib
           seaborn
+          scipy
           jupyterlab
           ipykernel
         ]);
