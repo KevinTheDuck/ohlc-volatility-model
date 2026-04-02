@@ -33,6 +33,11 @@ class Timezone_cfg:
     # desired data timezone, recommended to leave this be
     target: str = "America/New_York"
 
+@dataclass(frozen=True)
+class Volatility_cfg:
+    # Rolling window for estimators
+    n: int = 20
+
 
 # Aliases
 @dataclass(frozen=True)
@@ -41,6 +46,7 @@ class Project:
     schema: Schema_cfg = Schema_cfg()
     timezone: Timezone_cfg = Timezone_cfg()
     session: Session_cfg = Session_cfg()
+    volatility: Volatility_cfg = Volatility_cfg()
 
 
 config = Project()
